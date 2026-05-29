@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+:root {
+  --primary: #00C853;
+  --primary-dark: #00A843;
+  --primary-light: #E8F5E9;
+  --accent: #FF6B35;
+  --dark: #0A0F0D;
+  --text: #1A1A1A;
+  --text-muted: #6B7280;
+  --border: #F0F0F0;
+  --card: #FFFFFF;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: 'DM Sans', 'Segoe UI', sans-serif;
+  background: #F9FAFB;
+  color: var(--text);
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-up { animation: fade-up 0.4s ease both; }
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #D1D5DB; border-radius: 3px; }
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary) !important;
+  box-shadow: 0 0 0 3px rgba(0,200,83,0.12);
+}
